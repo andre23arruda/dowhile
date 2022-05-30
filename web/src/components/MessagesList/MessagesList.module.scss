@@ -1,0 +1,95 @@
+@import "../../theme/variables.scss";
+
+.messagesListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .logo {
+        height: 35px;
+        margin: 50px 0;
+    }
+
+    button {
+        align-self: flex-end;
+        background: $pink;
+        margin: 0 0 -100px;
+        cursor: pointer;
+        padding: 0 32px;
+        height: 56px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+
+    .cloudImg {
+        flex: 1;
+        margin-top: 25%;
+
+
+        img {
+            width: 600px;
+            height: 500px;
+        }
+    }
+
+    .messagesList {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        flex: 1;
+
+        .message {
+            max-width: 440px;
+
+            &:nth-child(2) {
+                margin-left: 80px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            .messageUser {
+                margin-top: 16px;
+                display: flex;
+                align-items: center;
+
+                .userImage {
+                    padding: 2px;
+                    background: linear-gradient(100deg, $pink 0%, $yellow 100%);
+                    border-radius: 50%;
+                    line-height: 0;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 2px solid $background
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                    margin-left: 12px;
+                }
+            }
+
+        }
+
+    }
+}
